@@ -7,15 +7,28 @@
 <h:head>
 </h:head>
 <h:body>
-	<h1 style="position: absolute; top: 35px; left: 240px">Hello
-		World!</h1>
-	<div style="position: absolute; top: 95px; left: 240px">
-		<p:panelGrid border="1" columns="2" cellpadding="5" >
-			<p:outputLabel for="textId1" value="#{msg['hello']}:" />
-			<p:inputText id="textId1" size="5" required="true"/>
-			<p:outputLabel for="spinnerId2" value="Standard Label:" />
-			<p:spinner id="spinnerId2" size="5" required="true"/>
-		</p:panelGrid>
-	</div>
+	<h:form>
+		<div style="position: absolute; top: 35px; left: 240px">
+			<h1>
+				<p:outputLabel value="#{msg['hello']}" />
+			</h1>
+			<div>
+				<p:panelGrid border="1" columns="2" cellpadding="5">
+
+					<p:outputLabel for="textId1" value="#{msg['hello']}:" />
+					<p:inputText id="textId1" size="5" required="true" />
+
+					<p:outputLabel for="spinnerId2" value="Standard Label:" />
+					<p:spinner id="spinnerId2" size="5" required="true" />
+
+					<p:outputLabel for="basic" value="Theme switcher:" />
+					<p:themeSwitcher id="basic">
+						<f:selectItem itemLabel="Choose Theme" itemValue="" />
+						<f:selectItems value="#{themeSwitcherView.themes}" />
+					</p:themeSwitcher>
+				</p:panelGrid>
+			</div>
+		</div>
+	</h:form>
 </h:body>
 </html>
