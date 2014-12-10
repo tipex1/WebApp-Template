@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>dorn.media</groupId>
-	<artifactId>webapp</artifactId>
+	<artifactId>web-template</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>webapp Maven Webapp</name>
@@ -21,6 +21,13 @@
 			<groupId>org.primefaces</groupId>
 			<artifactId>primefaces</artifactId>
 			<version>5.1</version>
+		</dependency>
+
+		<!-- PrimeFaces Themes-->
+		<dependency>
+			<groupId>org.primefaces.themes</groupId>
+			<artifactId>all-themes</artifactId>
+			<version>1.0.10</version>
 		</dependency>
 
 		<!-- JSF 2 -->
@@ -85,7 +92,7 @@
 
 	</dependencies>
 	<build>
-		<finalName>webapp</finalName>
+		<finalName>web-template</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
